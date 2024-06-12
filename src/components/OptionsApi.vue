@@ -1,26 +1,11 @@
 <script setup>
 import { ref } from "vue";
-
-defineProps({
-  msg: String,
-});
-
-const count = ref(0);
-
-const decrement = () => {
-  if (count.value > 0) {
-    count.value--;
-  }
-};
-
-const increment = () => {
-  count.value++;
-};
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
+  <h1>
+    --------------------------------Options API--------------------------------
+  </h1>
   <div class="card">
     <div class="card-content">{{ count }}</div>
     <div class="card-actions">
