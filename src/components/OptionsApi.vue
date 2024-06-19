@@ -1,5 +1,23 @@
-<script setup>
-import { ref } from "vue";
+<script >
+export default {
+  data() {
+    return {
+      count: 0,
+    };
+  },
+
+  methods: {
+    increment() {
+      this.count++;
+    },
+
+    decrement() {
+      if (this.count > 0) {
+        this.count--;
+      }
+    },
+  },
+};
 </script>
 
 <template>
@@ -9,8 +27,6 @@ import { ref } from "vue";
   <div class="card">
     <div class="card-content">{{ count }}</div>
     <div class="card-actions">
-      <!-- <button type="button" @click="count--">-</button>
-      <button type="button" @click="count++">+</button> -->
       <button type="button" @click="decrement">-</button>
       <button type="button" @click="increment">+</button>
     </div>
@@ -18,6 +34,9 @@ import { ref } from "vue";
 </template>
 
 <style scoped>
+h1 {
+  font-size: 20px;
+}
 .card {
   display: flex;
   justify-content: center;
