@@ -1,6 +1,7 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
 import OptionsApi from "./components/OptionsApi.vue";
+import CompositionApi from "./components/CompositionApi.vue";
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import OptionsApi from "./components/OptionsApi.vue";
   </div>
   <HelloWorld msg="Vite + Vue" />
   <OptionsApi />
+  <CompositionApi />
 </template>
 
 <style scoped>
