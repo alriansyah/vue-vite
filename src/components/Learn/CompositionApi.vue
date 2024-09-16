@@ -1,9 +1,8 @@
 <script setup >
 import { reactive, ref } from "vue";
 
-const count = ref(0);
-const listData = reactive([]);
-
+const count = ref(0); // untuk tipe data primitif
+const listData = reactive([]); // untuk tipe data non-primitif
 const decrement = () => {
   if (count.value > 0) {
     count.value--;
