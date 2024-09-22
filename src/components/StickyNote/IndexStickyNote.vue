@@ -30,6 +30,13 @@
           <p>22/09/2024</p>
         </div>
       </div>
+      <div class="form-overlay">
+        <div class="form-modal">
+          <button class="form-close-button">&times;</button>
+          <textarea name="memo" id="memo" cols="30" rows="10"></textarea>
+          <button class="form-save-button">Save</button>
+        </div>
+      </div>
     </main>
   </div>
 </template>
@@ -86,5 +93,52 @@ header {
   background-color: #ffa6c1;
   /* border-radius: ; */
   margin-bottom: 20px;
+}
+
+.form-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.77);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-modal {
+  position: relative;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-save-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  width: 100%;
+  background-color: #495a7d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.form-close-button {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  border: none;
 }
 </style>
