@@ -28,39 +28,21 @@ const addMemo = () => {
 
 <template>
   <div class="container">
-    {{ memos }}
     <header>
       <h1 class="header-title">Memo</h1>
       <button @click="handleShowForm" class="header-button" type="button">+</button>
     </header>
     <main>
       <div class="card-container">
-        <div class="card">
-          <p class="card-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius iste corporis, fugiat deleniti
-            maxime. Repudiandae, ipsa. Sunt, itaque illum?
+        <div v-for="memo in memos" class="card" :key="memo.id" :style="{ backgroundColor: memo.backgroundColor }">
+          <p class="card-content">{{ memo.memo }}
           </p>
-          <p>22/09/2024</p>
-        </div>
-        <div class="card">
-          <p class="card-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius iste corporis, fugiat deleniti
-            maxime. Repudiandae, ipsa. Sunt, itaque illum?
-          </p>
-          <p>22/09/2024</p>
-        </div>
-        <div class="card">
-          <p class="card-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius iste corporis, fugiat deleniti
-            maxime. Repudiandae, ipsa. Sunt, itaque illum?
-          </p>
-          <p>22/09/2024</p>
+          <p>{{ memo.date }}</p>
         </div>
       </div>
       <div v-if="showForm" class="form-overlay">
         <div class="form-modal">
           <button @click="showForm = false" class="form-close-button">&times;</button>
-          {{ newMemo }}
           <textarea v-model="newMemo" name="memo" id="memo" cols="30" rows="10"></textarea>
           <button @click="addMemo" class="form-save-button">Save</button>
         </div>
